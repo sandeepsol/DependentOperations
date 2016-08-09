@@ -14,6 +14,7 @@
 		8B8827BB1D5A65A1009E3855 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B8827B91D5A65A1009E3855 /* LaunchScreen.storyboard */; };
 		8B8827C61D5A65A1009E3855 /* Dependency_ManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8827C51D5A65A1009E3855 /* Dependency_ManagerTests.swift */; };
 		8B8827D11D5A65A1009E3855 /* Dependency_ManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8827D01D5A65A1009E3855 /* Dependency_ManagerUITests.swift */; };
+		8B8827E01D5A671D009E3855 /* DependencyInjectorNSOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8827DF1D5A671D009E3855 /* DependencyInjectorNSOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		8B8827CC1D5A65A1009E3855 /* Dependency_ManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Dependency_ManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B8827D01D5A65A1009E3855 /* Dependency_ManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependency_ManagerUITests.swift; sourceTree = "<group>"; };
 		8B8827D21D5A65A1009E3855 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B8827DF1D5A671D009E3855 /* DependencyInjectorNSOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependencyInjectorNSOperation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		8B8827AF1D5A65A1009E3855 /* Dependency_Manager */ = {
 			isa = PBXGroup;
 			children = (
+				8B8827DE1D5A66E9009E3855 /* DependencyInjectorNSOperation */,
 				8B8827B01D5A65A1009E3855 /* AppDelegate.swift */,
 				8B8827B21D5A65A1009E3855 /* ViewController.swift */,
 				8B8827B41D5A65A1009E3855 /* Main.storyboard */,
@@ -123,6 +126,14 @@
 				8B8827D21D5A65A1009E3855 /* Info.plist */,
 			);
 			path = Dependency_ManagerUITests;
+			sourceTree = "<group>";
+		};
+		8B8827DE1D5A66E9009E3855 /* DependencyInjectorNSOperation */ = {
+			isa = PBXGroup;
+			children = (
+				8B8827DF1D5A671D009E3855 /* DependencyInjectorNSOperation.swift */,
+			);
+			name = DependencyInjectorNSOperation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +269,7 @@
 			files = (
 				8B8827B31D5A65A1009E3855 /* ViewController.swift in Sources */,
 				8B8827B11D5A65A1009E3855 /* AppDelegate.swift in Sources */,
+				8B8827E01D5A671D009E3855 /* DependencyInjectorNSOperation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

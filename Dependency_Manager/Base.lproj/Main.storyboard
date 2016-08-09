@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Dependency_Manager" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,58 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ivc-Wu-eqs">
+                                <rect key="frame" x="20" y="64" width="560" height="30"/>
+                                <state key="normal" title="Task 1"/>
+                                <connections>
+                                    <action selector="Track1ButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mCq-45-mAp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CYF-aZ-OIr">
+                                <rect key="frame" x="20" y="285" width="560" height="30"/>
+                                <state key="normal" title="Task 2"/>
+                                <connections>
+                                    <action selector="Track2ButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vg9-qL-WE6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Enh-Ii-bLd">
+                                <rect key="frame" x="20" y="525" width="560" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fUD-Sb-oIR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aiJ-vB-GmQ">
+                                <rect key="frame" x="20" y="385" width="560" height="30"/>
+                                <state key="normal" title="Task 3"/>
+                                <connections>
+                                    <action selector="task3ButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fEI-hg-2VO"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aiJ-vB-GmQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="6Qm-07-dNe"/>
+                            <constraint firstAttribute="trailing" secondItem="ivc-Wu-eqs" secondAttribute="trailing" constant="20" id="CZe-fZ-vW3"/>
+                            <constraint firstItem="CYF-aZ-OIr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E9F-Tx-6Kp"/>
+                            <constraint firstItem="Enh-Ii-bLd" firstAttribute="top" secondItem="aiJ-vB-GmQ" secondAttribute="bottom" constant="110" id="Go7-4Q-UQv"/>
+                            <constraint firstItem="ivc-Wu-eqs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Hm7-j2-qvR"/>
+                            <constraint firstItem="CYF-aZ-OIr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="OS2-Qg-YRD"/>
+                            <constraint firstItem="aiJ-vB-GmQ" firstAttribute="top" secondItem="CYF-aZ-OIr" secondAttribute="bottom" constant="70" id="Tq6-Rv-YZX"/>
+                            <constraint firstItem="CYF-aZ-OIr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Wa8-Sq-o0x"/>
+                            <constraint firstAttribute="trailing" secondItem="CYF-aZ-OIr" secondAttribute="trailing" constant="20" id="YIX-nc-mkJ"/>
+                            <constraint firstAttribute="trailing" secondItem="aiJ-vB-GmQ" secondAttribute="trailing" constant="20" id="eDf-TA-Rdr"/>
+                            <constraint firstItem="ivc-Wu-eqs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="mcQ-GO-wvL"/>
+                            <constraint firstAttribute="trailing" secondItem="Enh-Ii-bLd" secondAttribute="trailing" constant="20" id="nbw-df-aGb"/>
+                            <constraint firstItem="Enh-Ii-bLd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="ou5-4g-BEk"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Enh-Ii-bLd" secondAttribute="bottom" constant="45" id="qPq-q9-n9Q"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="305" y="350"/>
         </scene>
     </scenes>
 </document>
