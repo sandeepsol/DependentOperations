@@ -15,8 +15,8 @@ class ViewController: UIViewController {
     @IBAction func Track1ButtonTapped(sender: AnyObject) {
         let task = self.createBlockOperations(withMessage: "Task 1")
         self.addTasksToQueue(task)
-        task.cancel()
-        //am in dev
+        task.start()
+        //am in testing
     }
     
     
