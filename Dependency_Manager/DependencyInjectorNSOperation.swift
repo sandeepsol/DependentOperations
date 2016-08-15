@@ -15,8 +15,8 @@ class DependencyInjectorNSOperation : NSBlockOperation {
     override func cancel() {
         for operation in self.dependencies {
             operation.cancel()
-            isSuccess = false
         }
+        isSuccess = false
         super.cancel()
     }
     

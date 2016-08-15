@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     @IBAction func Track1ButtonTapped(sender: AnyObject) {
         let task = self.createBlockOperations(withMessage: "Task 1")
         self.addTasksToQueue(task)
+        task.cancel()
+        //am in dev
     }
     
     
@@ -45,6 +47,7 @@ class ViewController: UIViewController {
     }
     
     func createBlockOperations(withMessage message : String) -> DependencyInjectorNSOperation {
+//        NSURLSessionUploadTask
         let task = DependencyInjectorNSOperation()
         task.cleanUpCode = { (passedTask) in
             if self.tasks?.indexOf(task) != nil {
